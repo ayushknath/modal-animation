@@ -105,7 +105,6 @@ button:hover {
   font-family: inherit;
   font-weight: 600;
   font-size: 15px;
-  color: rgb(92, 122, 255);
 }
 
 .modal-btn button:hover {
@@ -115,10 +114,6 @@ button:hover {
 button.btn-left {
   border-right: 1px solid #aaa;
   border-bottom-left-radius: var(--border-rad);
-}
-
-button.close {
-  color: rgb(255, 71, 71);
 }
 
 button.btn-right {
