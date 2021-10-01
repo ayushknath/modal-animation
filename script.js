@@ -10,16 +10,15 @@ if (isClosed === true) {
 }
 
 openModalBtn.onclick = () => {
-  modal.style.display = "block";
-  modalBody.classList.remove("zoom-in");
-  modalBody.classList.add("zoom-out");
+  setTimeout(() => {
+    modal.style.display = "block";
+    modalBody.classList.remove("zoom-in");
+    modalBody.classList.add("zoom-out");
+  }, 200);
 };
 
 closeModalBtn.onclick = () => {
   modalBody.classList.remove("zoom-out");
   modalBody.classList.add("zoom-in");
-
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 70);
+  modal.style.display = "none";
 };
