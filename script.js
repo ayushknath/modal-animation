@@ -22,3 +22,11 @@ closeModalBtn.onclick = () => {
   modalBody.classList.add("zoom-in");
   modal.style.display = "none";
 };
+
+function closeModalClickOutside(e) {
+  if (e.target.classList.contains("modal")) {
+    closeModalBtn.onclick();
+  }
+}
+
+modal.addEventListener("click", closeModalClickOutside);
