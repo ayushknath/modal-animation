@@ -28,7 +28,6 @@ button:hover {
   padding: 8px;
   color: white;
   background-color: #06c;
-  transition: 0.2s transform;
 }
 
 .open-modal:hover {

@@ -10,11 +10,9 @@ if (isClosed === true) {
 }
 
 openModalBtn.onclick = () => {
-  setTimeout(() => {
-    modal.style.display = "block";
-    modalBody.classList.remove("zoom-in");
-    modalBody.classList.add("zoom-out");
-  }, 200);
+  modal.style.display = "block";
+  modalBody.classList.remove("zoom-in");
+  modalBody.classList.add("zoom-out");
 };
 
 closeModalBtn.onclick = () => {
