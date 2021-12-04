@@ -1,0 +1,188 @@
+:root {
+  --body-bg: #0d0d0d;
+  --light-black: #353535;
+  --sub-text-black: #797979;
+  --button-bg: #2f75fb;
+  --button-border-radius: 14px;
+  --modal-border-radius: 24px;
+  --modal-blur-strength: 2px;
+}
+
+/* Defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+/* Utilities */
+.text-upper {
+  text-transform: uppercase;
+}
+
+/* Main styles */
+.app-container {
+  height: 100vh;
+  color: #fff;
+  background-color: var(--body-bg);
+}
+
+nav {
+  width: 100%;
+  padding: 0.875rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--light-black);
+}
+
+.log-out-button {
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  border-radius: var(--button-border-radius);
+}
+
+.log-out-button:hover {
+  background-color: rgba(47, 117, 251, 0.85);
+}
+
+.log-out-button:active {
+  background-color: #2466c4;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(34, 34, 34, 0.45);
+  backdrop-filter: blur(var(--modal-blur-strength));
+}
+
+.modal-body {
+  border-radius: var(--modal-border-radius);
+  background-color: var(--light-black);
+}
+
+.modal-body.scale-in {
+  animation: scale-in 0.09s forwards;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-text {
+  padding: 3rem 2rem;
+}
+
+.modal-text h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.375rem;
+  text-align: center;
+}
+
+.modal-text p {
+  margin: 0;
+  color: var(--sub-text-black);
+  text-align: center;
+}
+
+.modal-action {
+  border-top: 1px solid #fff;
+}
+
+.modal-button {
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom-left-radius: var(--modal-border-radius);
+  border-bottom-right-radius: var(--modal-border-radius);
+}
+
+.modal-button:hover {
+  background-color: #404040;
+}
+.modal-button:active {
+  background-color: #3d3d3d;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+  .modal-text h3 {
+    font-size: 1.125rem;
+  }
+
+  .modal-text p {
+    font-size: 0.875rem;
+  }
+
+  .modal-button {
+    font-size: 0.875rem;
+  }
+}
+
+/* Media query for smartphones */
+@media only screen and (max-width: 425px) {
+  :root {
+    --button-border-radius: 12px;
+    --modal-border-radius: 20px;
+  }
+
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .log-out-button {
+    padding: 0.625rem 1rem;
+  }
+
+  .modal {
+    padding: 0 1rem;
+  }
+
+  .modal-text {
+    padding: 2rem 1.7rem;
+  }
+
+  .modal-text h3 {
+    font-size: 1rem;
+  }
+
+  .modal-text p {
+    font-size: 0.75rem;
+  }
+
+  .modal-button {
+    padding: 0.625rem;
+    font-size: 0.875rem;
+  }
+}
